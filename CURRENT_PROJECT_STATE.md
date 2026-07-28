@@ -19,19 +19,16 @@ The project is in **Phase 1 — AI Target Language Purity Engine**.
 
 **Milestone 0: Problem Definition and Output Protocol is complete.**
 
-**Milestone 1: Dataset Engineering has reached initial provisional
-completion.** The first balanced three-language included sets are assembled
-and can be frozen for reproducible baseline development.
+**Milestone 1: Dataset Engineering is complete for provisional v1.** The first
+balanced snapshot is frozen with input hashes, deterministic grouped splits,
+overlap checks, and corpus statistics.
 
-The project is transitioning to:
+**Milestone 2: Rule-based / N-gram Baseline is complete for provisional v1.**
 
-```text
-Milestone 2: Rule-based / N-gram Baseline
-```
-
-No production model has been implemented. Detailed corpus QA continues in
-small versioned batches and does not block the provisional baseline. Any later
-QA release must rebuild the affected statistics, grouped split, and baseline.
+No Transformer or production model has been implemented. Detailed corpus QA
+continues in small versioned batches and does not block development. Every new
+QA data release must rebuild the statistics, overlap groups, grouped split,
+and baseline before results are compared.
 
 ## Milestone 0 Results
 
@@ -110,6 +107,27 @@ This is an initial Milestone 1 closure rather than a claim that every sentence
 has completed final human review. The current snapshot is suitable for the
 first reproducible baseline; ongoing QA remains part of dataset maintenance.
 
+## Provisional v1 Freeze and Milestone 2 Results
+
+The snapshot contains 15,627 records: 5,209 per language. Each class has 4,167
+train, 521 validation, and 521 test records. Exact normalized overlaps and
+available upstream groups are atomic within one split. No cross-language exact
+normalized overlap was found. One within-Shanghainese normalized duplicate
+group remains; both records share one split and are flagged for later QA.
+
+The character 2–5 gram Multinomial Naive Bayes baseline achieved 97.89%
+validation accuracy and 97.63% test accuracy. Test macro-F1 was 97.62%. Test
+F1 was 96.42% for Shanghainese, 99.14% for Cantonese, and 97.29% for Mandarin.
+Of 37 test errors, 36 were Shanghainese predicted as Cantonese or Mandarin.
+This asymmetry and class-level length differences make leakage, register,
+length, and source-style audits a priority before treating the score as
+linguistic validity. Misclassified test records averaged 14.49 characters,
+compared with 19.23 for correct predictions.
+
+Naive Bayes was used because scikit-learn was unavailable and installation did
+not complete. Same-split TF-IDF logistic regression remains a useful later
+replication, but does not block this reproducible baseline.
+
 ## Deferred Until Development Evidence Exists
 
 - numerical warning and evidence thresholds;
@@ -123,15 +141,11 @@ These are planned development decisions, not unfinished Milestone 0 scope.
 
 ## Next Session
 
-Freeze the current data version and begin the approved baseline:
-
-1. complete corpus statistics, overlap groups, and a leakage-safe grouped
-   train/validation/test split;
-2. freeze and document the reproducible provisional dataset interface;
-3. begin Milestone 2 with a character n-gram baseline, metrics, and initial
-   error analysis;
-4. continue detailed QA in parallel, recording each batch and rerunning the
-   affected data build and baseline when a new data version is released.
+1. Continue small-batch QA without blocking development.
+2. When QA accumulates into a named data version, regenerate the freeze,
+   statistics, overlaps, grouped split, and baseline.
+3. Review provisional v1 before approving another milestone.
+4. Do not begin Transformer, explanation, or UI work without new approval.
 
 ## Working Rules
 
