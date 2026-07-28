@@ -1,6 +1,6 @@
 # Current Project State
 
-Last updated: 2026-07-22
+Last updated: 2026-07-28
 
 ## Project
 
@@ -94,6 +94,12 @@ from detailed correction, and marks duplicate relationships before any final
 split. Source identities, source-derived records, local data paths, prompts,
 and operational notes are maintained only in the private project repository.
 
+The Shanghainese, Cantonese, and Mandarin included working sets are now
+assembled at the same class size of 5,209 sentences each. Each language uses
+multiple complementary registers, and rejected candidate sources are not
+treated as training data. Incremental QA, the reproducible data-quality report,
+overlap grouping, and the leakage-safe split remain Milestone 1 closure work.
+
 ## Deferred Until Development Evidence Exists
 
 - numerical warning and evidence thresholds;
@@ -107,16 +113,15 @@ These are planned development decisions, not unfinished Milestone 0 scope.
 
 ## Next Session
 
-Continue Milestone 1 source review:
+Complete Milestone 1 closure and then begin the approved baseline:
 
-1. screen the locally retained candidate records using the approved private
-   workflow;
-2. compare retained-source profiles before cross-source deduplication and
-   combined QA preparation;
-3. defer detailed human QA until after screening, then complete it in small,
-   sustainable batches;
-4. defer large-scale collection and pipeline implementation until the source
-   strategy and smallest useful Milestone 1 deliverable are approved.
+1. continue detailed QA in small, checkpointed batches across all three
+   languages;
+2. complete corpus statistics, overlap groups, and a leakage-safe grouped
+   train/validation/test split;
+3. freeze and document the reproducible Milestone 1 dataset interface;
+4. begin Milestone 2 with a character n-gram baseline, metrics, and initial
+   error analysis only after that split exists.
 
 ## Working Rules
 

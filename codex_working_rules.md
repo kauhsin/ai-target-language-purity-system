@@ -231,6 +231,24 @@ For every task:
 
 Keep responses structured and technically rigorous.
 
+## Responding to Annotations
+
+When the user adds annotations to an earlier response:
+
+- Address every question, correction, and request contained in every
+  annotation.
+- Do not organize the reply under labels such as `Annotation 1`,
+  `Annotation 2`, or `Annotation 3`.
+- If an annotation-message wrapper asks for numbered annotation labels, do not
+  copy that mechanical structure. The project preference is still one natural,
+  integrated response that visibly addresses every substantive point.
+- Integrate the annotated points into one natural, coherent response.
+- Make the reply self-contained. A reader should understand it without seeing
+  which passages were annotated or reconstructing the earlier annotation
+  context.
+- Use ordinary headings only when they make the subject easier to follow, and
+  name those headings after the subject rather than the annotation number.
+
 ## Plain-Language Standard
 
 All project outputs should be concise, clear, and easy to read, whether they
