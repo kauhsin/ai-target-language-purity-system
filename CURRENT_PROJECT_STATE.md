@@ -1,6 +1,6 @@
 # Current Project State
 
-Last updated: 2026-07-28
+Last updated: 2026-07-29
 
 ## Project
 
@@ -17,16 +17,21 @@ themselves are pure or should be isolated from outside influence.
 
 The project is in **Phase 1 — AI Target Language Purity Engine**.
 
-**Milestone 0: Problem Definition and Output Protocol is complete.** The project
-has begun the design and source-feasibility work for:
+**Milestone 0: Problem Definition and Output Protocol is complete.**
+
+**Milestone 1: Dataset Engineering has reached initial provisional
+completion.** The first balanced three-language included sets are assembled
+and can be frozen for reproducible baseline development.
+
+The project is transitioning to:
 
 ```text
-Milestone 1: Dataset Engineering
+Milestone 2: Rule-based / N-gram Baseline
 ```
 
-No model or production data pipeline has been implemented. Milestone 1 remains
-in design and small-scale feasibility testing; this status update does not
-authorize production implementation.
+No production model has been implemented. Detailed corpus QA continues in
+small versioned batches and does not block the provisional baseline. Any later
+QA release must rebuild the affected statistics, grouped split, and baseline.
 
 ## Milestone 0 Results
 
@@ -97,8 +102,13 @@ and operational notes are maintained only in the private project repository.
 The Shanghainese, Cantonese, and Mandarin included working sets are now
 assembled at the same class size of 5,209 sentences each. Each language uses
 multiple complementary registers, and rejected candidate sources are not
-treated as training data. Incremental QA, the reproducible data-quality report,
-overlap grouping, and the leakage-safe split remain Milestone 1 closure work.
+treated as training data. The current totals can be frozen as a reproducible
+provisional version for baseline development while detailed QA continues in
+small, versioned batches.
+
+This is an initial Milestone 1 closure rather than a claim that every sentence
+has completed final human review. The current snapshot is suitable for the
+first reproducible baseline; ongoing QA remains part of dataset maintenance.
 
 ## Deferred Until Development Evidence Exists
 
@@ -113,15 +123,15 @@ These are planned development decisions, not unfinished Milestone 0 scope.
 
 ## Next Session
 
-Complete Milestone 1 closure and then begin the approved baseline:
+Freeze the current data version and begin the approved baseline:
 
-1. continue detailed QA in small, checkpointed batches across all three
-   languages;
-2. complete corpus statistics, overlap groups, and a leakage-safe grouped
+1. complete corpus statistics, overlap groups, and a leakage-safe grouped
    train/validation/test split;
-3. freeze and document the reproducible Milestone 1 dataset interface;
-4. begin Milestone 2 with a character n-gram baseline, metrics, and initial
-   error analysis only after that split exists.
+2. freeze and document the reproducible provisional dataset interface;
+3. begin Milestone 2 with a character n-gram baseline, metrics, and initial
+   error analysis;
+4. continue detailed QA in parallel, recording each batch and rerunning the
+   affected data build and baseline when a new data version is released.
 
 ## Working Rules
 

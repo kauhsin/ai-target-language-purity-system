@@ -3,6 +3,12 @@
 ### Phase 1 — AI Target Language Purity Engine
 #### 当前认可设计、技术路线与实施说明
 
+> Current implementation status (2026-07-29): Milestone 1 initial corpus
+> assembly is provisionally complete with balanced three-language included
+> sets. Detailed QA continues in versioned batches. The next active work is the
+> grouped data freeze and Milestone 2 character n-gram baseline; Transformer
+> work remains out of scope until Milestone 2 is reviewed.
+
 ---
 
 ## 0. 给 Codex 的最高优先级说明
