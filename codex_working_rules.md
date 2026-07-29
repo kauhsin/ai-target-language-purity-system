@@ -66,6 +66,14 @@ Work on **one milestone at a time**.
 
 Never skip ahead.
 
+Before preparing a next-session prompt or starting milestone work, verify the
+active milestone and its deliverables against the canonical root architecture.
+Do not rely on memory or an older handoff. If project documents disagree about
+milestone numbering, stop and resolve the conflict before proceeding. Every
+reusable prompt must name the active milestone and explicitly exclude later
+milestones. Broad instructions such as “continue,” “finish,” or “move faster”
+do not authorize milestone skipping.
+
 Every milestone follows the same process:
 
 1. Discuss

@@ -5,9 +5,9 @@
 
 > Current implementation status (2026-07-29): Milestone 1 initial corpus
 > assembly is provisionally complete with balanced three-language included
-> sets. Detailed QA continues in versioned batches. The next active work is the
-> grouped data freeze and Milestone 2 character n-gram baseline; Transformer
-> work remains out of scope until Milestone 2 is reviewed.
+> sets. Detailed QA continues in versioned batches. The next active work is
+> Milestone 2 data-split design only. Milestone 3 challenge-set design and
+> Milestone 4 baseline work remain out of scope.
 
 ---
 
@@ -1199,19 +1199,41 @@ Codex 应按以下顺序指导开发，不要一开始就做完整 Demo。
 交付：
 
 - 三类纯语料统一格式；
-- 数据质量报告；
-- 防泄漏划分；
-- 数据统计。
+- 来源级筛选与初步质量检查；
+- 平衡的三语言初版语料；
+- 可供后续划分设计使用的来源与分组元数据。
 
-## Milestone 2：Rule-based / N-gram Baseline
+## Milestone 2：Data-Split Design
+
+交付：
+
+- train / validation / test 比例方案；
+- source、speaker、dialogue/document、duplicate、parallel group 的分组规则；
+- 跨语言重合句的防泄漏规则；
+- language、source、length、register 的分层检查方案；
+- 可复现性与 QA 版本更新规则。
+
+该里程碑只讨论和设计划分。未经明确批准，不实施划分，不进入后续里程碑。
+
+## Milestone 3：Challenge-Set Design
+
+交付：
+
+- 挑战集类别与覆盖范围；
+- 人工构造和审核协议；
+- 标签、元数据和评估 schema；
+- 与纯语料测试集的隔离规则。
+
+## Milestone 4：Rule-based / N-gram Baseline
 
 交付：
 
 - character n-gram baseline；
 - baseline metrics；
+- confusion matrix；
 - 初步错误分析。
 
-## Milestone 3：Transformer Sentence Detector
+## Milestone 5：Transformer Sentence Detector
 
 交付：
 
@@ -1220,7 +1242,7 @@ Codex 应按以下顺序指导开发，不要一开始就做完整 Demo。
 - validation metrics；
 - checkpoint。
 
-## Milestone 4：Detector Evaluation
+## Milestone 6：Detector Evaluation
 
 交付：
 
@@ -1229,7 +1251,7 @@ Codex 应按以下顺序指导开发，不要一开始就做完整 Demo。
 - calibration；
 - status threshold。
 
-## Milestone 5：Explanation Module
+## Milestone 7：Explanation Module
 
 交付：
 
@@ -1238,7 +1260,7 @@ Codex 应按以下顺序指导开发，不要一开始就做完整 Demo。
 - evidence ranking；
 - example report。
 
-## Milestone 6：Explanation Evaluation
+## Milestone 8：Explanation Evaluation
 
 交付：
 
@@ -1247,7 +1269,7 @@ Codex 应按以下顺序指导开发，不要一开始就做完整 Demo。
 - stability；
 - human evaluation template。
 
-## Milestone 7：Optional Retrieval
+## Milestone 9：Optional Retrieval
 
 交付：
 
@@ -1255,7 +1277,7 @@ Codex 应按以下顺序指导开发，不要一开始就做完整 Demo。
 - nearest-neighbor examples；
 - retrieval evidence display。
 
-## Milestone 8：Optional Rewrite Pipeline
+## Milestone 10：Optional Rewrite Pipeline
 
 未来才考虑：
 
@@ -1280,7 +1302,7 @@ Detect evidence
 
 该方向属于后续版本。第一版不提供自动纠错、教学反馈或地道改写承诺。
 
-## Milestone 9：Demo
+## Milestone 11：Demo
 
 交付：
 

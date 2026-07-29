@@ -21,17 +21,16 @@ The project is in **Phase 1 — AI Target Language Purity Engine**.
 
 **Milestone 1: Dataset Engineering has reached initial provisional
 completion.** The first balanced three-language included sets are assembled
-and can be frozen for reproducible baseline development.
+and are ready for the next design step.
 
 The project is transitioning to:
 
 ```text
-Milestone 2: Rule-based / N-gram Baseline
+Milestone 2: Data-Split Design
 ```
 
 No production model has been implemented. Detailed corpus QA continues in
-small versioned batches and does not block the provisional baseline. Any later
-QA release must rebuild the affected statistics, grouped split, and baseline.
+small versioned batches and does not block Milestone 2 design work.
 
 ## Milestone 0 Results
 
@@ -102,13 +101,12 @@ and operational notes are maintained only in the private project repository.
 The Shanghainese, Cantonese, and Mandarin included working sets are now
 assembled at the same class size of 5,209 sentences each. Each language uses
 multiple complementary registers, and rejected candidate sources are not
-treated as training data. The current totals can be frozen as a reproducible
-provisional version for baseline development while detailed QA continues in
-small, versioned batches.
+treated as training data. The current totals provide the input to Milestone 2
+data-split design while detailed QA continues in small, versioned batches.
 
 This is an initial Milestone 1 closure rather than a claim that every sentence
-has completed final human review. The current snapshot is suitable for the
-first reproducible baseline; ongoing QA remains part of dataset maintenance.
+has completed final human review. Ongoing QA remains part of dataset
+maintenance and must be versioned before later split implementation.
 
 ## Deferred Until Development Evidence Exists
 
@@ -123,15 +121,17 @@ These are planned development decisions, not unfinished Milestone 0 scope.
 
 ## Next Session
 
-Freeze the current data version and begin the approved baseline:
+Discuss and design the data split only:
 
-1. complete corpus statistics, overlap groups, and a leakage-safe grouped
-   train/validation/test split;
-2. freeze and document the reproducible provisional dataset interface;
-3. begin Milestone 2 with a character n-gram baseline, metrics, and initial
-   error analysis;
-4. continue detailed QA in parallel, recording each batch and rerunning the
-   affected data build and baseline when a new data version is released.
+1. design the train/validation/test ratios and grouping units;
+2. design handling for source, speaker, dialogue/document, duplicate,
+   cross-language overlap, and parallel-group leakage;
+3. design stratification checks for language, source, length, and register;
+4. document reproducibility and QA-version interaction;
+5. stop and wait for explicit approval before implementing the split.
+
+Milestone 3 challenge-set design and Milestone 4 baseline work remain out of
+scope.
 
 ## Working Rules
 
