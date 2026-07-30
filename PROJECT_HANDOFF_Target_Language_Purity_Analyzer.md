@@ -3,11 +3,12 @@
 ### Phase 1 — AI Target Language Purity Engine
 #### 当前认可设计、技术路线与实施说明
 
-> Current implementation status (2026-07-29): Milestone 1 initial corpus
-> assembly is provisionally complete with balanced three-language included
-> sets. Detailed QA continues in versioned batches. The next active work is
-> Milestone 2 data-split design only. Milestone 3 challenge-set design and
-> Milestone 4 baseline work remain out of scope.
+> Current implementation status (2026-07-30): Milestone 1 is complete. The
+> frozen Shanghainese, Cantonese, and Mandarin reference sets contain 5,207
+> sentences each and passed the final recorded duplicate audit. The next
+> active work is Milestone 2 data-split design, implementation, validation,
+> and freeze. Milestone 3 challenge-set design and Milestone 4 baseline work
+> remain out of scope.
 
 ---
 
@@ -1203,7 +1204,7 @@ Codex 应按以下顺序指导开发，不要一开始就做完整 Demo。
 - 平衡的三语言初版语料；
 - 可供后续划分设计使用的来源与分组元数据。
 
-## Milestone 2：Data-Split Design
+## Milestone 2：Data-Split Design, Implementation, Validation, and Freeze
 
 交付：
 
@@ -1212,8 +1213,13 @@ Codex 应按以下顺序指导开发，不要一开始就做完整 Demo。
 - 跨语言重合句的防泄漏规则；
 - language、source、length、register 的分层检查方案；
 - 可复现性与 QA 版本更新规则。
+- 按批准设计生成实际 train / validation / test；
+- 泄漏、分布、完整性和可复现性验证；
+- manifest、统计与冻结版本。
 
-该里程碑只讨论和设计划分。未经明确批准，不实施划分，不进入后续里程碑。
+当前已批准约 80/10/10 的目标比例、hard-group 规则、sealed test，以及
+小规模 QA 更新时尽量保留未变化 group 的原 split。先完成剩余设计并获得
+实现批准，再执行和验证划分。该里程碑结束前不得进入后续里程碑。
 
 ## Milestone 3：Challenge-Set Design
 

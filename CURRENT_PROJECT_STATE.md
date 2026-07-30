@@ -1,6 +1,6 @@
 # Current Project State
 
-Last updated: 2026-07-29
+Last updated: 2026-07-30
 
 ## Project
 
@@ -19,18 +19,17 @@ The project is in **Phase 1 — AI Target Language Purity Engine**.
 
 **Milestone 0: Problem Definition and Output Protocol is complete.**
 
-**Milestone 1: Dataset Engineering has reached initial provisional
-completion.** The first balanced three-language included sets are assembled
-and are ready for the next design step.
+**Milestone 1: Dataset Engineering is complete.** The first frozen,
+balanced three-language reference sets have passed final read-only QA and are
+ready for the reproducible split.
 
 The project is transitioning to:
 
 ```text
-Milestone 2: Data-Split Design
+Milestone 2: Data-Split Design, Implementation, Validation, and Freeze
 ```
 
-No production model has been implemented. Detailed corpus QA continues in
-small versioned batches and does not block Milestone 2 design work.
+No production model has been implemented.
 
 ## Milestone 0 Results
 
@@ -98,15 +97,22 @@ from detailed correction, and marks duplicate relationships before any final
 split. Source identities, source-derived records, local data paths, prompts,
 and operational notes are maintained only in the private project repository.
 
-The Shanghainese, Cantonese, and Mandarin included working sets are now
-assembled at the same class size of 5,209 sentences each. Each language uses
+The Shanghainese, Cantonese, and Mandarin reference sets are frozen at 5,207
+sentences per language, or 15,621 sentences in total. Each language uses
 multiple complementary registers, and rejected candidate sources are not
-treated as training data. The current totals provide the input to Milestone 2
-data-split design while detailed QA continues in small, versioned batches.
+treated as training data.
 
-This is an initial Milestone 1 closure rather than a claim that every sentence
-has completed final human review. Ongoing QA remains part of dataset
-maintenance and must be versioned before later split implementation.
+The final read-only audit found no normalized exact duplicate groups within a
+language, no normalized exact overlaps across languages, and no unresolved
+high-similarity candidates under the recorded audit rules. Future QA remains
+possible, but every change must produce a new version and preserve unchanged
+group assignments whenever practical.
+
+Similarity thresholds used to find review candidates were exploratory rather
+than universal standards. Confirmed duplicate and template decisions were
+made through human review and recorded execution trails. Repeated templates
+must be reduced during cleaning; broad semantic similarity alone is not enough
+to create a hard dependency group.
 
 ## Deferred Until Development Evidence Exists
 
@@ -119,16 +125,28 @@ maintenance and must be versioned before later split implementation.
 
 These are planned development decisions, not unfinished Milestone 0 scope.
 
+## Deferred Public Showcase Preparation
+
+During active development, maintain sensitive artifacts only in the private
+repository and naturally public-safe milestone outputs in the public
+repository. Do not create or synchronize public demonstration copies solely
+for possible future presentation.
+
+A public-safe toy dataset, runnable demonstration pipeline, example
+configuration, and sanitized result package are deferred until the project
+owner explicitly decides to prepare the project for public presentation. They
+are not an automatic post-QA task and are outside Milestone 2.
+
 ## Next Session
 
-Discuss and design the data split only:
+Continue Milestone 2 from its approved decisions:
 
-1. design the train/validation/test ratios and grouping units;
-2. design handling for source, speaker, dialogue/document, duplicate,
-   cross-language overlap, and parallel-group leakage;
-3. design stratification checks for language, source, length, and register;
-4. document reproducibility and QA-version interaction;
-5. stop and wait for explicit approval before implementing the split.
+1. use an approximate 80/10/10 train/validation/sealed-test target;
+2. materialize and validate the approved hard groups;
+3. finish the remaining soft-similarity, stratification, algorithm, tolerance,
+   reproducibility-manifest, and validation decisions;
+4. obtain approval for the complete implementation design;
+5. implement, validate, and freeze the reproducible split.
 
 Milestone 3 challenge-set design and Milestone 4 baseline work remain out of
 scope.
