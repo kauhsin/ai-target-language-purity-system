@@ -142,11 +142,11 @@ are not an automatic post-QA task and are outside Milestone 2.
 Continue Milestone 2 from its approved decisions:
 
 1. use an approximate 80/10/10 train/validation/sealed-test target;
-2. materialize and validate the approved hard groups;
-3. finish the remaining soft-similarity, stratification, algorithm, tolerance,
-   reproducibility-manifest, and validation decisions;
-4. obtain approval for the complete implementation design;
-5. implement, validate, and freeze the reproducible split.
+2. retain the completed grouping and deterministic allocation trial as
+   non-frozen evidence;
+3. review the candidate and tolerance/reporting decision;
+4. define the reproducibility manifest and complete validation suite;
+5. only then materialize, validate, and freeze the reproducible split.
 
 Milestone 3 challenge-set design and Milestone 4 baseline work remain out of
 scope.
