@@ -25,8 +25,8 @@ balanced three-language reference sets passed final read-only QA.
 **Milestone 2: Data-Split Design, Implementation, Validation, and Freeze is
 complete and frozen** as `m2_split_frozen_2026-08-04_v1`.
 
-Milestone 3 challenge-set design has not started. No production model has been
-implemented.
+Milestone 3 challenge-set design is complete and approved. Challenge-data
+production has not started. No production model has been implemented.
 
 ## Milestone 0 Results
 
@@ -153,9 +153,10 @@ are not an automatic post-QA task and are outside Milestone 2.
 
 ## Next Session
 
-Milestone 2 is closed. Await a separate explicit start for Milestone 3
-challenge-set design. Milestone 4 baseline work, model training, explanation,
-retrieval, and UI work remain out of scope until their milestones are approved.
+Continue Milestone 3 with the first approved challenge-data category. Complete
+one category at a time from generation protocol through human review and
+validation. Milestone 4 baseline work, model training, explanation, retrieval,
+and UI work remain out of scope.
 
 ## Working Rules
 

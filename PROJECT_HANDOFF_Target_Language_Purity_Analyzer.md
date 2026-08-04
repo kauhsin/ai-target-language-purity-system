@@ -7,8 +7,8 @@
 > Milestone 2 data-split design, implementation, validation, and freeze are
 > complete for `m2_split_frozen_2026-08-04_v1`. The frozen split contains
 > 12,495 train, 1,563 validation, and 1,563 sealed-test records, with 4,165 /
-> 521 / 521 records per language. Milestone 3 challenge-set design and
-> Milestone 4 baseline work remain out of scope until explicitly started.
+> 521 / 521 records per language. Milestone 3 challenge-set design is approved;
+> challenge-data production has not started. Milestone 4 remains out of scope.
 
 ---
 
