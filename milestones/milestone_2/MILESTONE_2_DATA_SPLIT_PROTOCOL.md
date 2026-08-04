@@ -1,7 +1,9 @@
 # Milestone 2: Data-Split Protocol
 
-Status: Working design; hard-group, split-ratio, sealed-test, and QA-version
-stability principles approved through 2026-07-30.
+Status: Frozen implementation completed 2026-08-04. The hard-group,
+split-ratio, sealed-test, QA-version stability, reproducibility, and validation
+principles below describe the frozen split version
+`m2_split_frozen_2026-08-04_v1`.
 
 ## Scope
 
@@ -93,9 +95,18 @@ must be recorded.
 Exact reruns of one frozen version require stable record ordering, a fixed
 random seed, versioned grouping and splitting rules, and input/output hashes.
 
-## Pending Design Decisions
+## Implemented Milestone 2 Decisions
 
-- stratification and distribution rules;
-- split algorithm and tolerance;
-- manifest schema and exact reproducibility checks;
-- validation checks and freeze outputs.
+- The approved hierarchical allocation priority is language totals, then
+  source, then register, then length.
+- Source/register/length are reported quantitatively without arbitrary automatic
+  failure thresholds; hard integrity checks remain failure gates.
+- The deterministic group-aware allocator uses stable ordering, a fixed seed,
+  and fixed search parameters.
+- The manifest records input, rule, allocator, assignment, output, validation,
+  status, and version-lineage hashes.
+- The frozen validation suite checks group integrity, forced placement, source
+  coverage, language totals, leakage, output consistency, and independent
+  assignment reproducibility.
+- The frozen split is 12,495 train / 1,563 validation / 1,563 sealed test,
+  with 4,165 / 521 / 521 records per language.

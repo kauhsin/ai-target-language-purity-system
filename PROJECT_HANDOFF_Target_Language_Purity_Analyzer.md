@@ -3,12 +3,12 @@
 ### Phase 1 — AI Target Language Purity Engine
 #### 当前认可设计、技术路线与实施说明
 
-> Current implementation status (2026-07-30): Milestone 1 is complete. The
-> frozen Shanghainese, Cantonese, and Mandarin reference sets contain 5,207
-> sentences each and passed the final recorded duplicate audit. The next
-> active work is Milestone 2 data-split design, implementation, validation,
-> and freeze. Milestone 3 challenge-set design and Milestone 4 baseline work
-> remain out of scope.
+> Current implementation status (2026-08-04): Milestone 1 is complete, and
+> Milestone 2 data-split design, implementation, validation, and freeze are
+> complete for `m2_split_frozen_2026-08-04_v1`. The frozen split contains
+> 12,495 train, 1,563 validation, and 1,563 sealed-test records, with 4,165 /
+> 521 / 521 records per language. Milestone 3 challenge-set design and
+> Milestone 4 baseline work remain out of scope until explicitly started.
 
 ---
 

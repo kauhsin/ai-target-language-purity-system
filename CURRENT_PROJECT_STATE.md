@@ -1,6 +1,6 @@
 # Current Project State
 
-Last updated: 2026-07-30
+Last updated: 2026-08-04
 
 ## Project
 
@@ -20,16 +20,13 @@ The project is in **Phase 1 — AI Target Language Purity Engine**.
 **Milestone 0: Problem Definition and Output Protocol is complete.**
 
 **Milestone 1: Dataset Engineering is complete.** The first frozen,
-balanced three-language reference sets have passed final read-only QA and are
-ready for the reproducible split.
+balanced three-language reference sets passed final read-only QA.
 
-The project is transitioning to:
+**Milestone 2: Data-Split Design, Implementation, Validation, and Freeze is
+complete and frozen** as `m2_split_frozen_2026-08-04_v1`.
 
-```text
-Milestone 2: Data-Split Design, Implementation, Validation, and Freeze
-```
-
-No production model has been implemented.
+Milestone 3 challenge-set design has not started. No production model has been
+implemented.
 
 ## Milestone 0 Results
 
@@ -114,6 +111,23 @@ made through human review and recorded execution trails. Repeated templates
 must be reduced during cleaning; broad semantic similarity alone is not enough
 to create a hard dependency group.
 
+## Milestone 2 Progress
+
+Milestone 2 completed the approved group-aware split from design through
+implementation, reproducibility validation, and freeze. The selected
+deterministic allocator was independently run twice with identical assignment
+results.
+
+The frozen split contains 12,495 train records, 1,563 validation records, and
+1,563 sealed-test records. Each language contributes 4,165 / 521 / 521 records
+to those splits. Validation passed hard-group integrity, the fixed Shanghainese
+train group, source coverage, language totals, normalized cross-split leakage,
+materialized-output consistency, and assignment reproducibility.
+
+The exact manifest, output paths, and hashes are retained in the private
+repository. The sealed test must remain untouched for later model, feature,
+threshold, and checkpoint decisions.
+
 ## Deferred Until Development Evidence Exists
 
 - numerical warning and evidence thresholds;
@@ -139,17 +153,9 @@ are not an automatic post-QA task and are outside Milestone 2.
 
 ## Next Session
 
-Continue Milestone 2 from its approved decisions:
-
-1. use an approximate 80/10/10 train/validation/sealed-test target;
-2. retain the completed grouping and deterministic allocation trial as
-   non-frozen evidence;
-3. review the candidate and tolerance/reporting decision;
-4. define the reproducibility manifest and complete validation suite;
-5. only then materialize, validate, and freeze the reproducible split.
-
-Milestone 3 challenge-set design and Milestone 4 baseline work remain out of
-scope.
+Milestone 2 is closed. Await a separate explicit start for Milestone 3
+challenge-set design. Milestone 4 baseline work, model training, explanation,
+retrieval, and UI work remain out of scope until their milestones are approved.
 
 ## Working Rules
 
