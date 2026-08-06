@@ -27,7 +27,7 @@ The project is currently in **Phase 1 — AI Target Language Purity Engine**.
 
 **Milestone 0: Problem Definition and Output Protocol is complete.** The project has defined its Version 1 scope, data principles, input/output protocol, evidence contract, and high-level success criteria.
 
-Milestone 1 has reached initial provisional completion: balanced Shanghainese, Cantonese, and Mandarin included sets are assembled. Detailed QA continues in versioned batches. No production model or complete analysis pipeline has been released yet. The active next milestone is **Milestone 2: Data-Split Design**.
+Milestone 1 and **Milestone 2: Data-Split Design, Implementation, Validation, and Freeze** are complete. The active five-category Milestone 3 challenge release is also complete in the private repository; no challenge records are published here. The next milestone is **Milestone 4: Rule-based / Character n-gram Baseline**. No production model or complete analysis pipeline has been released yet.
 
 ## Documentation
 
@@ -41,3 +41,5 @@ This project is under active development. Documentation, experiments, evaluation
 
 Milestone 0 documentation was completed on 2026-07-20.
 Milestone 1 initial corpus assembly was completed on 2026-07-29.
+Milestone 2 frozen split was completed on 2026-08-04.
+Milestone 3 active challenge release was completed on 2026-08-06.

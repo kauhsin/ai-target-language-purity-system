@@ -1,6 +1,6 @@
 # Current Project State
 
-Last updated: 2026-08-04
+Last updated: 2026-08-06
 
 ## Project
 
@@ -25,8 +25,12 @@ balanced three-language reference sets passed final read-only QA.
 **Milestone 2: Data-Split Design, Implementation, Validation, and Freeze is
 complete and frozen** as `m2_split_frozen_2026-08-04_v1`.
 
-Milestone 3 challenge-set design is complete and approved. Challenge-data
-production has not started. No production model has been implemented.
+Milestone 3's active five-category challenge release is complete in the private
+repository. It contains 410 development records and 110 frozen records; the
+single-location replacement category is development-only. Multiple-location
+mixing uses 40 accepted families per target language, split 20/20. Challenge
+records remain private and evaluation-only. No production model has been
+implemented.
 
 ## Milestone 0 Results
 
@@ -128,6 +132,16 @@ The exact manifest, output paths, and hashes are retained in the private
 repository. The sealed test must remain untouched for later model, feature,
 threshold, and checkpoint decisions.
 
+## Milestone 3 Progress
+
+The active release contains five reviewed challenge categories: single-location
+replacement, multiple-location mixing, longer shared expressions,
+target-distinctive one-to-three-character sentences, and shared
+one-to-three-character sentences. The private release has separate development
+and frozen bundles plus a reproducible assignment manifest. Confirmed
+alternative-spelling and user-facing segmentation extensions are deferred and
+are not part of this active release.
+
 ## Deferred Until Development Evidence Exists
 
 - numerical warning and evidence thresholds;
@@ -153,10 +167,11 @@ are not an automatic post-QA task and are outside Milestone 2.
 
 ## Next Session
 
-Continue Milestone 3 with the first approved challenge-data category. Complete
-one category at a time from generation protocol through human review and
-validation. Milestone 4 baseline work, model training, explanation, retrieval,
-and UI work remain out of scope.
+Begin Milestone 4 only after its design is discussed and explicitly approved.
+Milestone 4 establishes a rule-based / character n-gram baseline, baseline
+metrics, a confusion matrix, and initial error analysis. Transformer training,
+challenge-set detector evaluation, calibration, explanation, retrieval, and UI
+remain out of scope until their later milestones.
 
 ## Working Rules
 
