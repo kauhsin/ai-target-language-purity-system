@@ -3,12 +3,18 @@
 ### Phase 1 — AI Target Language Purity Engine
 #### 当前认可设计、技术路线与实施说明
 
-> Current implementation status (2026-08-04): Milestone 1 is complete, and
+> Current implementation status (2026-08-07): Milestone 1 is complete, and
 > Milestone 2 data-split design, implementation, validation, and freeze are
 > complete for `m2_split_frozen_2026-08-04_v1`. The frozen split contains
 > 12,495 train, 1,563 validation, and 1,563 sealed-test records, with 4,165 /
-> 521 / 521 records per language. Milestone 3 challenge-set design is approved;
-> challenge-data production has not started. Milestone 4 remains out of scope.
+> 521 / 521 records per language. Milestone 3's active five-category challenge
+> release is also complete: 520 reviewed records, consisting of 410
+> development and 110 frozen records. Single-location replacement is
+> development-only; multiple-location mixing uses 40 accepted families per
+> target language, split 20/20. Challenge records remain private and
+> evaluation-only. Milestone 4, the rule-based / character n-gram baseline, is
+> the next authorized milestone and begins with discussion and design. No
+> production model has been implemented.
 
 ---
 
@@ -1218,10 +1224,12 @@ Codex 应按以下顺序指导开发，不要一开始就做完整 Demo。
 - manifest、统计与冻结版本。
 
 当前已批准约 80/10/10 的目标比例、hard-group 规则、sealed test，以及
-小规模 QA 更新时尽量保留未变化 group 的原 split。先完成剩余设计并获得
-实现批准，再执行和验证划分。该里程碑结束前不得进入后续里程碑。
+小规模 QA 更新时尽量保留未变化 group 的原 split。该设计已经完成执行、
+验证并冻结；冻结版本的具体 materialized 文件与 hashes 保留在私有仓库，
+sealed test 仍不得用于后续调参或模型选择。Milestone 2 已结束，不得回到
+未冻结状态而不创建新的版本和记录。
 
-## Milestone 3：Challenge-Set Design
+## Milestone 3：Challenge-Set Design and Active Release
 
 交付：
 
@@ -1229,6 +1237,17 @@ Codex 应按以下顺序指导开发，不要一开始就做完整 Demo。
 - 人工构造和审核协议；
 - 标签、元数据和评估 schema；
 - 与纯语料测试集的隔离规则。
+
+当前 active release 已完成并保持在私有、evaluation-only 边界内。它包含
+五类共 520 条 reviewed records：410 条 development、110 条 frozen。五类
+包括 single-location replacement、multiple-location mixing、longer shared
+expressions、target-distinctive short sentences 和 shared short sentences。
+其中 single-location replacement 的 300 条只属于 development；multiple-
+location mixing 按每个目标语言 40 个 accepted families、20/20 拆分。替代
+拼写和面向用户的 segmentation 扩展暂缓，不属于本次 active release。
+
+Milestone 3 已完成。它没有授权 baseline、训练、Transformer、tokenizer、
+retrieval 或 UI 工作。
 
 ## Milestone 4：Rule-based / N-gram Baseline
 
@@ -1238,6 +1257,10 @@ Codex 应按以下顺序指导开发，不要一开始就做完整 Demo。
 - baseline metrics；
 - confusion matrix；
 - 初步错误分析。
+
+这是当前下一个获授权的 milestone。必须先完成讨论、设计并获得明确批准，
+再开始实现；Transformer training 与 challenge-set detector evaluation
+属于后续 milestones。
 
 ## Milestone 5：Transformer Sentence Detector
 
@@ -1357,6 +1380,12 @@ Detect evidence
 ---
 
 # 13. 给 Codex 的初始任务建议
+
+> Archive note (2026-08-07): The prompt below is the original Milestone 1
+> kickoff suggestion and is retained for historical context. Milestone 1 and
+> the later split and challenge-release work are now complete; this archived
+> prompt is not a current implementation authorization. The current next
+> milestone is Milestone 4, as stated above.
 
 可以从以下 prompt 开始：
 
