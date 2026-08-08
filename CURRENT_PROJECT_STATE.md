@@ -167,11 +167,21 @@ are not an automatic post-QA task and are outside Milestone 2.
 
 ## Next Session
 
-Begin Milestone 4 only after its design is discussed and explicitly approved.
-Milestone 4 establishes a rule-based / character n-gram baseline, baseline
-metrics, a confusion matrix, and initial error analysis. Transformer training,
-challenge-set detector evaluation, calibration, explanation, retrieval, and UI
-remain out of scope until their later milestones.
+Milestone 4 is active, and its teaching/design checkpoint is complete as of
+2026-08-08. All 35 baseline design items are approved. No baseline has been
+implemented or trained.
+
+The next session must re-read the canonical architecture and approved private
+decision table, resolve the exact compatible runtime/solver before the first
+run, and present the minimal implementation file plan. Implementation begins
+only after the project owner says exactly
+`APPROVED: IMPLEMENT MILESTONE 4`.
+
+Milestone 4 establishes a reproducible character n-gram linear baseline,
+validation metrics, confusion matrices, and initial error/feature analysis.
+The sealed reference test and Milestone 3 challenge data must not enter
+training or tuning. Transformer training, detector evaluation/calibration,
+explanation, retrieval, and UI remain out of scope until later milestones.
 
 ## Working Rules
 

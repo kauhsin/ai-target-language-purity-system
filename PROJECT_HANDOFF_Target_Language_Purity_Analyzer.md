@@ -3,7 +3,7 @@
 ### Phase 1 — AI Target Language Purity Engine
 #### 当前认可设计、技术路线与实施说明
 
-> Current implementation status (2026-08-07): Milestone 1 is complete, and
+> Current implementation status (2026-08-08): Milestone 1 is complete, and
 > Milestone 2 data-split design, implementation, validation, and freeze are
 > complete for `m2_split_frozen_2026-08-04_v1`. The frozen split contains
 > 12,495 train, 1,563 validation, and 1,563 sealed-test records, with 4,165 /
@@ -13,8 +13,9 @@
 > development-only; multiple-location mixing uses 40 accepted families per
 > target language, split 20/20. Challenge records remain private and
 > evaluation-only. Milestone 4, the rule-based / character n-gram baseline, is
-> the next authorized milestone and begins with discussion and design. No
-> production model has been implemented.
+> active. Its teaching and design checkpoint is complete, with all 35 decision
+> items approved. No baseline has been implemented or trained. Implementation
+> still requires the exact authorization `APPROVED: IMPLEMENT MILESTONE 4`.
 
 ---
 
@@ -1258,9 +1259,10 @@ retrieval 或 UI 工作。
 - confusion matrix；
 - 初步错误分析。
 
-这是当前下一个获授权的 milestone。必须先完成讨论、设计并获得明确批准，
-再开始实现；Transformer training 与 challenge-set detector evaluation
-属于后续 milestones。
+这是当前 active milestone。教学与设计 checkpoint 已完成，35项设计决定均已
+批准，但尚未授权实现或训练。只有项目 owner 明确说
+`APPROVED: IMPLEMENT MILESTONE 4` 后才能实施。Transformer training 与
+challenge-set detector evaluation 属于后续 milestones。
 
 ## Milestone 5：Transformer Sentence Detector
 

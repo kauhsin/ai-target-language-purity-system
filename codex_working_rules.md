@@ -280,6 +280,31 @@ examples, interface text, and other project deliverables.
 - Do not sacrifice technical accuracy for simplicity. Use a plain-language
   explanation first, then add the precise technical formulation when needed.
 
+## Teaching Technical Choices
+
+When teaching a configuration or design space:
+
+- group related decisions into clear chunks instead of presenting an
+  unstructured list;
+- name each option and give it a minimal plain-language explanation before
+  adding detail;
+- keep the first overview compact enough for the project owner to understand
+  the full decision surface without being overwhelmed;
+- for each decision chunk, summarize common practice, the project-specific
+  recommendation, meaningful alternatives, and their main tradeoffs;
+- when the concepts are understood, present the remaining choices as a compact
+  decision sheet that the project owner can review and fill in, rather than
+  forcing an unnecessarily slow item-by-item exchange;
+- when the project owner asks to continue through a topic, cover the complete
+  decision chunk in one response instead of explaining only one small option
+  at a time;
+- keep each option concise: retain the core intuition, one useful example,
+  standard industry terminology, and common practice, while omitting niche
+  detail unless it becomes relevant;
+- defer project-specific recommendations until the project owner asks for one
+  or the discussion reaches the consolidated decision checkpoint;
+- expand only the parts that prompt questions or materially affect the design.
+
 ## Language Policy for Project Materials
 
 - Every document published in the public repository should have an English
